@@ -4,14 +4,14 @@ CookedSeafood's Migrator is a mod for smoothly migrating from CookedSeafood's ol
 
 ## Feature
 
-- Update item data for [Rogue Sword](https://github.com/CookedSeafood/rogue-sword).
+- Update item data for [Rogue Sword](https://github.com/CookedSeafood/rogue-sword) when the item is right-clicked.
 
 | From | To 1.3.x |
 | --- | --- |
 | 1.2.x | ✔️ |
 | 1.1.x | ✔️ |
 
-- Update item data for [Ender Staff](https://github.com/CookedSeafood/ender-staff).
+- Update item data for [Ender Staff](https://github.com/CookedSeafood/ender-staff) when the item is right-clicked.
 
 | From | To 1.2.x |
 | --- | --- |
