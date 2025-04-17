@@ -22,6 +22,11 @@ public class CookedSeafoodsMigrator implements ModInitializer {
 	// That way, it's clear which mod wrote info, warnings, and errors.
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
+	public static final String ROGUE_SWORD_ITEM_NAME_1_1_12 = "Rogue Sword";
+	public static final String ENDER_STAFF_ITEM_NAME_1_0_5 = "Ender Staff";
+	public static final String ROGUE_SWORD_CUSTOM_ID_1_3_0 = "rogue_sword:rogue_sword";
+	public static final String ENDER_STAFF_CUSTOM_ID_1_2_0 = "ender_staff:ender_staff";
+
 	@Override
 	public void onInitialize() {
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
@@ -32,27 +37,30 @@ public class CookedSeafoodsMigrator implements ModInitializer {
 
 		UseItemCallback.EVENT.register((player, world, hand) -> {
 			ItemStack stack = player.getStackInHand(hand);
-			if ("Rogue Sword".equals(stack.getItemName().getString()) && !"rogue-sword".equals(stack.getCustomId())) {
+			String itemName = stack.getItemName().getString();
+			String customId = stack.getCustomId();
+
+			if (ROGUE_SWORD_ITEM_NAME_1_1_12.equals(itemName) && !ROGUE_SWORD_CUSTOM_ID_1_3_0.equals(customId)) {
 				stack.set(DataComponentTypes.CUSTOM_DATA, NbtComponent.of(
 					stack.getOrDefault(DataComponentTypes.CUSTOM_DATA, NbtComponent.DEFAULT).copyNbt().copyFrom(
 						new NbtCompound(
 							new HashMap<>(
 								Map.<String, NbtElement>of(
 									"id",
-									NbtString.of("rogue-sword")
+									NbtString.of(ROGUE_SWORD_CUSTOM_ID_1_3_0)
 								)
 							)
 						)
 					)
 				));
-			} else if ("Ender Staff".equals(stack.getItemName().getString()) && !"ender-staff".equals(stack.getCustomId())) {
+			} else if (ENDER_STAFF_ITEM_NAME_1_0_5.equals(itemName) && !ENDER_STAFF_CUSTOM_ID_1_2_0.equals(customId)) {
 				stack.set(DataComponentTypes.CUSTOM_DATA, NbtComponent.of(
 					stack.getOrDefault(DataComponentTypes.CUSTOM_DATA, NbtComponent.DEFAULT).copyNbt().copyFrom(
 						new NbtCompound(
 							new HashMap<>(
 								Map.<String, NbtElement>of(
 									"id",
-									NbtString.of("ender-staff")
+									NbtString.of(ENDER_STAFF_CUSTOM_ID_1_2_0)
 								)
 							)
 						)

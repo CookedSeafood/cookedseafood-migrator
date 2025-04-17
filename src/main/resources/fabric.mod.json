@@ -3,7 +3,7 @@
 	"id": "cookedseafoods-migrator",
 	"version": "${version}",
 	"name": "CookedSeafood's Migrator",
-	"description": "A mod for smoothly migrating from cookedseafood's old mods.",
+	"description": "A mod for smoothly migrating from CookedSeafood's old mods.",
 	"authors": [
 		{
 			"name": "CookedSeafood",
@@ -32,7 +32,7 @@
 		"minecraft": "~1.21.4",
 		"java": ">=21",
 		"fabric-api": "*",
-		"candy-wrapper": ">=0.5.9"
+		"candy-wrapper": ">=0.5.10"
 	},
 	"suggests": {
 		"another-mod": "*"
