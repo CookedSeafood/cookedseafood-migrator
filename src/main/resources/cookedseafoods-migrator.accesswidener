@@ -1,0 +1,5 @@
+accessWidener v2 named
+
+accessible method net/minecraft/nbt/NbtCompound <init> (Ljava/util/Map;)V
+
+accessible method net/minecraft/nbt/NbtList <init> (Ljava/util/List;B)V

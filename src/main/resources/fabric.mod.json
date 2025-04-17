@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "cookedseafoods-migrator",
+	"version": "${version}",
+	"name": "CookedSeafood's Migrator",
+	"description": "A mod for smoothly migrating from cookedseafood's old mods.",
+	"authors": [
+		{
+			"name": "CookedSeafood",
+			"contact": {
+				"homepage": "https://github.com/CookedSeafood"
+			}
+		}
+	],
+	"contact": {
+		"homepage": "https://modrinth.com/mod/cookedseafoods-migrator",
+		"sources": "https://github.com/CookedSeafood/cookedseafoods-migrator"
+	},
+	"license": "GNU-GPL-3.0",
+	"icon": "assets/cookedseafoods-migrator/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.cookedseafood.cookedseafoodsmigrator.CookedSeafoodsMigrator"
+		]
+	},
+	"mixins": [
+		"cookedseafoods-migrator.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.13",
+		"minecraft": "~1.21.4",
+		"java": ">=21",
+		"fabric-api": "*",
+		"candy-wrapper": ">=0.5.9"
+	},
+	"suggests": {
+		"another-mod": "*"
+	},
+	"accessWidener": "cookedseafoods-migrator.accesswidener"
+}
